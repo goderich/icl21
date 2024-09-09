@@ -306,7 +306,8 @@ Step 3: Vowel syncope
 ** Conclusion
 
 - Data not conducive to rule-based or classic OT approaches.
-- HS analysis of Red-CVC affixation builds on top of Huang (2017) while preserving felicity.
+- HS analysis helps build on top of Huang (2017) while preserving felicity.
+- Does this make sense?
 
 ** Future research
 
