@@ -1,0 +1,317 @@
+#+macro: br @@html:<br>@@
+# Only allow subscript forms in curly brackets
+#+OPTIONS: ^:{}
+
+* Roadmap
+** Roadmap
+
+- Basic information
+- Atayal morphology
+- Vowel alternations in canonical roots [cite: @huang2017a]
+- Alternations in reduplicated monosyllables
+- Conclusion
+
+* Basic information
+** Atayal
+#+BEGIN_columns
+
+#+ATTR_HTML: :width 50%
+#+BEGIN_column
+#+attr_html: :height 80%
+[[./img/kneril.jpg]]
+#+END_column
+
+#+ATTR_HTML: :width 50%
+#+BEGIN_column
+- Austronesian family.
+  - Atayalic branch (together with Seediq).
+- Spoken in the mountains of northern and central Taiwan.
+#+END_column
+
+#+END_columns
+
+** [[./img/map.png]]
+** Subgrouping
+
+[[./img/subgrouping.svg]]
+# TODO: source?
+** Consonant inventory
+
+| p      | t      | k     | q | ʔ     |
+| b [β] |        | g [ɣ] |   |       |
+|        | c [ts] |       |   |       |
+|        | s      | x     |   | h [ħ] |
+| m      | n      | ŋ     |   |       |
+|        | l,r    |       |   |       |
+| w      | y [j]  |       |   |       |
+
+** Vowel inventory
+
+- Three vowel phonemes: /a/, /i/, /u/.
+  - Additional quasi-phonemic /ə/ that can only occur in the initial syllable.
+- Stress is word-final.
+
+** Caveat lector
+
+[[./img/puss.jpg]]
+* Atayal morphology 101
+
+** Root structure
+
+Most roots in Matu'uwal have the following structure:
+| CVC     | /baq/     | to know  |
+| CVCVC   | /qaniq/   | to eat   |
+| CV.VC   | /kaal/    | to speak |
+| CVCVCVC | /qaluwap/ | to hunt  |
+
+** Affixation
+
+- Austronesian voice system with four different voices (also called foci).
+- Voice is marked on each predicate.
+
+** Affixation
+
+#+begin_small
+| Voice          | Abbr | Root      | Affix  | Form                 | Gloss    |
+|----------------+------+-----------+--------+----------------------+----------|
+| Actor          | AV   | /kaal/    | *-um-* | /k\textbf{um}aal/    | to say   |
+| Patient        | PV   | /baq/     | *-un*  | /baq\textbf{un}/     | to know  |
+| Locative       | LV   | /puŋ/     | *-an*  | /puŋ\textbf{an}/     | to hear  |
+| Circumstantial | CV   | /pakatiʔ/ | *si-*  | /\textbf{si}pakatiʔ/ | to throw |
+#+end_small
+
+** PNS
+
+*Pseudo nasal substitution* [cite: @blust2013 244]:
+{{{br}}}
+Substitution of the initial consonant of a root with /m/
+instead of /-um-/ infixation (AV).
+
+** PNS
+
+- Obligatory in roots beginning with /p-/ and /b-/.
+- Lexically determined in roots beginning with /ʔ-/, /k-/, or /q-/.
+
+** PNS
+
+| Stem               | AV                 | Gloss    |
+|--------------------+--------------------+----------|
+| /\textbf{p}umuwaʔ/ | /\textbf{m}umuwaʔ/ | to plant |
+| /\textbf{b}aiq/    | /\textbf{m}aiq/    | to give  |
+| /\textbf{ʔ}agal/   | /\textbf{m}agal/   | to take  |
+| /\textbf{k}itaal/  | /\textbf{m}itaal/  | to look  |
+| /\textbf{q}aniq/   | /\textbf{m}aniq/   | to eat   |
+
+* Vowel alternations in canonical roots
+
+** Basics
+
+- In some roots, vowels alternate after affixation.
+- The ultima, penultima, or both vowels can alternate.
+
+** Alternation examples
+
+| Bare stem                  | AV                             | PV/LV                   | Gloss        |
+|----------------------------+--------------------------------+-------------------------+--------------|
+| /tah\textbf{u}k/           | /t<um>ah\textbf{u}k/           | /tahk-un/               | to cook      |
+| /g\textbf{ə}l\textbf{u}g/  | /g<um>l\textbf{u}g/            | /g\textbf{a}lg-an/      | to accompany |
+| /c\textbf{a}ʔr\textbf{u}x/ | /c<um>\textbf{a}ʔr\textbf{u}x/ | /c<in>ʔ\textbf{a}rx-an/ | to stand     |
+
+** Huang's (2017) analysis
+
+- [cite/t: @huang2017a] analysed Matu'uwal as having Metrically Controlled Syncope (MCS), using Harmonic Serialism (HS) and basing her analysis on [cite/t: @mccarthy2008].
+- In a nutshell: R-to-L iambic metrification followed by vowel syncope.
+
+** Constraints
+
+- *WdCon* :: every morphosyntactic word must be parsed as a prosodic word
+- *Exhaustivity [Exh]* :: here: each unfooted syllable results in a violation.
+- \textbf{*V-Place\textsubscript{weak} [*V\textsubscript{weak}]} :: each weak vowel in an unstressed position results in a violation (vacuously satisified in unparsed syllables).
+- *Ident(Stress) [Id(str)]* :: stress identity
+
+** Example
+
+- The following is an example of a two-step derivation of /c<in>ʔarx-an/ 'to stand [LV.PFV]':
+  1. Metrical parsing and stress assignment.
+  2. Vowel syncope.
+
+** Step 1: syllable parsing
+
+|                      <r> |  <c>  | <c> |   <c>   |    <c>    |
+|         /c<in>_ʔ_r_x-an/ | WdCon | Exh | Id(str) | *V_{weak} |
+|--------------------------+-------+-----+---------+-----------|
+| → /(ˈci)(n_ˈʔ_)(r_ˈxan)/ |       |     |    3    |     2     |
+|      /ci(n_ˈʔ_)(r_ˈxan)/ |       | 1W  |    2    |     2     |
+|            /cin_ʔ_r_xan/ |  1W   |  L  |    L    |     L     |
+
+** Step 2: vowel syncope
+
+|                    <r> |    <c>    | <c> |
+| /(ˈci)(n_ˈʔ_)(r_ˈxan)/ | *V_{weak} | Max |
+|------------------------+-----------+-----|
+| → /(ˈcin)(ˈʔ_r)(ˈxan)/ |           |  2  |
+| /(ˈci)(n_ˈʔ_)(r_ˈxan)/ |    2W     |  L  |
+
+** Huang (2017)
+
+- Vowel assignment then follows the pattern /_a_u/.
+- Huang argues for using empty vowel slots in the UR (/_/) as a way to better capture Matu'uwal syncope.
+  - These come from historical /*ə/.
+
+* Affixation in{{{br}}}Red-*CVC* roots
+
+** Intro
+
+- Reduplicated monosyllabic roots are quite rare.
+- These roots can be verbal, and if so, use voice affixes.
+
+** Data
+
+** Same vowel in RB
+
+| AV           | PV/LV                    | Gloss        |
+|--------------+--------------------------+--------------|
+| /h<um>irhir/ | /hir\textbf{u}hir-un/    | to saw       |
+| /g<um>irgir/ | /ga-gir\textbf{a}gir-an/ | to sieve     |
+| /paqpaq/     | /paq\textbf{u}paq-un/    | to pulverize |
+| /t<um>aptap/ | /tap\textbf{a}tap-an/    | to fan       |
+
+** Different vowels in RB
+
+| AV                    | PV                    | Gloss                |
+|-----------------------+-----------------------+----------------------|
+| /g<um>\textbf{a}sgus/ | /g\textbf{u}sugus-un/ | to scrub             |
+| /s<um>\textbf{a}lsul/ | /s\textbf{u}lusul-un/ | to repeat after s.o. |
+| /l<um>\textbf{a}ŋluŋ/ | /l\textbf{u}ŋuluŋ-un/ | to think             |
+| /c<um>\textbf{a}mcum/ | /c\textbf{u}mucum-un/ | to tidy up           |
+| /h<um>\textbf{a}khuk/ | /h\textbf{u}kuhuk-un/ | to smoke (food)      |
+
+** Red-*CVC* + PNS
+
+| AV                         | PV           | Gloss             |
+|----------------------------+--------------+-------------------|
+| /\textbf{m}as\textbf{m}us/ | /busubus-un/ | to play with fire |
+| /\textbf{m}ag\textbf{m}ug/ | /bugubug-un/ | to chop firewood  |
+
+** Analysis :animate:
+** Analysis :animate:
+
+- Double PNS in reduplicated monosyllables means reduplication must occur on a synchronic level.
+- Reduplication of suffix vowel and subsequent effects on syncope mean that reduplication occurs early in the derivation.
+- The infix /<um>/ does *not* get reduplicated (unless it triggers PNS), and is not part of the base.
+
+** Analysis
+
+Three-step model:
+1. Reduplication
+2. Metrical parsing
+3. Vowel syncope
+
+** Derivation: AV
+
+Step 1: Reduplication
+|                  <r> | <c> | <c> |
+| /<um>/ + RED + /c_m/ | *CC | Dep |
+|----------------------+-----+-----|
+|        → /cum_m_c_m/ |     |  1  |
+|           /cum_mc_m/ | 1W  |  L  |
+We introduce the ranking \textbf{*CC ≫ Dep}
+in order to allow vowel epenthesis for later metrical parsing.
+
+** Derivation: AV
+Step 2: Metrical parsing and stress assignment
+|                 <r> | <c> |   <c>   |   <c>   |
+|       /c<um>_m_cum/ | Exh | Id(str) | *V-weak |
+|---------------------+-----+---------+---------|
+| → /(cuˈm_)(m_ˈcum)/ |     |    2    |    1    |
+|     /cum_​(m_ˈcum)/ | 2W  |   1L    |    1    |
+|     /cum_m_​(ˈcum)/ | 3W  |   1L    |    L    |
+Same as [cite/t: @huang2017a].
+
+** Derivation: AV
+Step 3: Vowel syncope
+|                <r> |   <c>   | <c> |
+|  /(cuˈm_)(m_ˈcum)/ | *V-weak | Max |
+|--------------------+---------+-----|
+| → /(cuˈm_m)(ˈcum)/ |         |  1  |
+|  /(cuˈm_)(m_ˈcum)/ |   1W    |  L  |
+Same as [cite/t: @huang2017a].
+
+** Derivation: PV :animate:
+** Derivation: PV :animate:
+Step 1: Reduplication
+|                 <r> | <c> |  <c>  | <c> |
+| RED + /c_m/ + /-un/ | *CC | Id-BR | Dep |
+|---------------------+-----+-------+-----|
+|       → /c_muc_mun/ |     |   1   |  1  |
+|         /c_m_c_mun/ |     |  2W   |  1  |
+|          /c_mc_mun/ | 1W  |  2W   |  L  |
+|        /c_munc_mun/ | 1W  |   L   | 2W  |
+Need to introduce *Ident-BR* to capture suffix vowel copying.{{{br}}}
+\textbf{*CC ≫ Ident-BR} to prevent full reduplication.
+
+** Derivation: PV
+Step 2: Metrical parsing and stress assignment
+|                 <r> | <c> |   <c>   |   <c>   |
+|         /c_muc_mun/ | Exh | Id(str) | *V-weak |
+|---------------------+-----+---------+---------|
+| → /(c_ˈmu)(c_ˈmun)/ |     |    2    |    2    |
+|     /c_m_​(c_ˈmun)/ | 2W  |    1    |   1L    |
+
+** Derivation: PV
+Step 3: Vowel syncope (incorrect)
+|                   <r> |   <c>   | <c> |
+|     /(c_ˈmu)(c_ˈmun)/ | *V-weak | Max |
+|-----------------------+---------+-----|
+| ☹ *(c_ˈmu)(c_ˈmun)* |    2    |     |
+|    → /(c_ˈmuc)(ˈmun)/ |    1    |  1  |
+
+** New constraint
+
+- *RootV* :: the root must have at least one vowel
+- *RootV* needs to dominate \textbf{*V\textsubscript{weak}}
+
+** Derivation: PV
+Step 3: Vowel syncope
+|                 <r> |   <c>   |   <c>   | <c> |
+|   /(c_ˈmu)(c_ˈmun)/ | *RootV* | *V-weak | Max |
+|---------------------+---------+---------+-----|
+| → /(c_ˈmu)(c_ˈmun)/ |         |    2    |     |
+|    /(c_ˈmuc)(ˈmun)/ |   1W    |   1L    | 1W  |
+
+** Derivation: PNS + Red-CVC :animate:
+** Derivation: PNS + Red-CVC :animate:
+Step 1: Reduplication
+| RED + /<um>/ + /b_s/ | *CC | Id-BR | Dep |
+|----------------------+-----+-------+-----|
+| → /m_s_m_s/          |     |       |   1 |
+| /m_s_b_s/            |     | 1W    |   1 |
+
+** Derivation: PNS + Red-CVC
+Step 2: Metrical parsing and stress assignment
+| /m_s_m_s/         | Exh | Id(str) | *V-weak |
+|-------------------+-----+---------+---------|
+| → /(ˈm_)(s_ˈm_s)/ |     | 2       |       1 |
+| /m_​(s_ˈm_s)/      | 1W  | 1L      |       1 |
+| /m_s_​(ˈm_s)/      | 2W  | 1L      |       L |
+
+** Derivation: PNS + Red-CVC
+Step 3: Vowel syncope
+| /(ˈm_)(s_ˈm_s)/  | *V-weak | Max |
+|------------------+---------+-----|
+| /(ˈm_)(s_ˈm_s)/  | 1W      | L   |
+| → /(ˈm_s)(ˈm_s)/ |         | 1   |
+
+* Wrap-up
+** Conclusion
+
+- Data not conducive to rule-based or classic OT approaches.
+- HS analysis of Red-CVC affixation builds on top of Huang (2017) while preserving felicity.
+
+** Future research
+
+- Is there a better way to capture the fact that suffixes and PNS are reduplicated, but not /<um>/?
+- How does vowel assignment work? Why do suffixed Red-CəC break the pattern?
+
+* Mahuway cimu cubalay
+** References
